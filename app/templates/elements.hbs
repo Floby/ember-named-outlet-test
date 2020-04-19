@@ -10,4 +10,10 @@
     {{/each}}
   </ul>
 </aside>
-{{liquid-outlet}}
+<div class="right">
+  <nav>{{liquid-outlet "workspace-nav"}}</nav>
+  <main class="main">
+    {{liquid-outlet}}
+    <div class="map">map</div>
+  </main>
+</div>

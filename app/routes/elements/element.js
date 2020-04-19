@@ -14,6 +14,10 @@ export default class ElementsElementRoute extends Route {
       into: 'elements',
       outlet: 'focus'
     })
+    this.render('elements/nav', {
+      into: 'elements',
+      outlet: 'workspace-nav'
+    })
   }
 
   redirect () {

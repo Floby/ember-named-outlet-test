@@ -1,5 +1,4 @@
 @import './reset.less';
-
 :root {
   font-family: sans-serif;
 }
@@ -34,12 +33,22 @@ body {
     box-sizing: border-box;
   }
 
-  .workspace {
-    width: 35em;
-    box-sizing: border-box;
-    padding: 1em;
-    background: lightgreen;
+  .right {
+    flex-grow: 1;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    nav {
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    
+    main {
+      flex-grow: 1;
+    }
+
   }
+
 
   .map {
     background: darkgray;
@@ -73,5 +82,31 @@ body {
   li {
     margin-bottom: 2em;
   }
-
 }
+
+nav {
+  ul {
+    padding: .5em .5em 0;
+  }
+  ul li {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: .3em .5em;
+    border-radius: 4px 4px 0 0;
+  }
+}
+main {
+  display: flex;
+  flex-direction: row;
+  .workspace {
+    width: 35em;
+    box-sizing: border-box;
+    padding: 1em;
+    background: lightgreen;
+  }
+  .map {
+    flex-grow: 1;
+  }
+}
+
