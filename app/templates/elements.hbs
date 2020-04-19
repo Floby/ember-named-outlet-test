@@ -1,0 +1,13 @@
+<aside class="selection">
+  {{liquid-outlet "focus"}}
+  <ul class="list">
+    {{#each @model as |element|}}
+      <li>
+        <LinkTo @route="elements.element" @model={{element}}>
+          Element #{{element.id}}
+        </LinkTo>
+      </li>
+    {{/each}}
+  </ul>
+</aside>
+{{liquid-outlet}}

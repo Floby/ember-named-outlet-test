@@ -1,5 +1,10 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<header>
+  <LinkTo @route="index">Back to Home</LinkTo>
+</header>
+<div class="application">
+  {{outlet}}
+  <div class="map">
+    map
+  </div>
+</div>
 
-{{outlet}}
